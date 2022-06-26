@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+Good day.
+<div th:each="car:${auto}">
+    <a th:href="@{/cars/{id}(id=${car.getId()})}" th:text="${car.getManufacturer()}">cars</a>
+</div>
+</body>
+</html>
