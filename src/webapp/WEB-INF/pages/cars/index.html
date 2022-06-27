@@ -5,9 +5,16 @@
     <title>Cars</title>
 </head>
 <body>
-Good day.
+CAR LIST:
+
 <div th:each="car:${auto}">
-    <a th:href="@{/cars/{id}(id=${car.getId()})}" th:text="${car.getManufacturer()}">cars</a>
+    <a th:href="@{/cars/{id}(id=${car.getId()})}" th:text="${car.getManufacturer()}+${car.getModel()}" >cars</a>
+    <br>
+    <p th:text="${car.getId()}">value</p>
+    <p th:text="${car.getManufacturer()}">value</p>
+    <p th:text="${car.getModel()}">value</p>
+    <p th:text="${car.getYears()}">value</p>
+    <br>
 </div>
 </body>
 </html>
